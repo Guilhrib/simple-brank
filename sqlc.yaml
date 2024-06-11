@@ -1,0 +1,15 @@
+version: "2"
+cloud:
+    organization: "ribeiro"
+    project: "simplebank"
+    hostname: "localhost"
+sql:
+  - name: 'db'
+    engine: "postgresql"
+    queries: "./db/query/"
+    schema: "./db/migration/"
+    gen:
+      go:
+        package: "db"
+        out: "./db/sqlc"
+        sql_package: "pgx/v5"
