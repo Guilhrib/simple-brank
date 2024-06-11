@@ -13,3 +13,4 @@ sql:
         package: "db"
         out: "./db/sqlc"
         sql_package: "pgx/v5"
+        emit_empty_slices: true
