@@ -17,7 +17,7 @@ sqlc:
 	sqlc generate
 
 test:
-	go test -v -cover ./...
+	DB_SOURCE=postgresql://postgres:admin@localhost:5432/simplebank?sslmode=disable go test -v -cover ./...
 
 server:
 	go run main.go
