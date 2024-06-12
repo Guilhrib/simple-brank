@@ -7,10 +7,6 @@ import (
 	"github.com/jackc/pgx/v5/pgxpool"
 )
 
-const (
-	DbSource = "postgresql://postgres:admin@localhost:5432/simplebank?sslmode=disable"
-)
-
 // Store provides all functions to execute db queries and transactions
 type SQLStore struct {
 	connPool *pgxpool.Pool
